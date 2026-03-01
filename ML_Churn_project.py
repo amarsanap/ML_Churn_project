@@ -14,7 +14,8 @@ import pickle
 
 
 import os
-os.listdir(r"C:\Users\Admin\OneDrive\Documents\Pandas")
+# Use '.' to look in the current folder where your script is located
+files = os.listdir(".")
 df= pd.read_csv('WA_Fn-UseC_-Telco-Customer-Churn.csv')
 
 df.drop(columns=["customerID"], inplace=True)
@@ -186,4 +187,5 @@ def predict_churn(input_dict):
     print("Probability:", probability)
 
 predict_churn(input_Amar)
+
 
